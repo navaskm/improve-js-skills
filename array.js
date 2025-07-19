@@ -6,7 +6,7 @@ const countMap = arrayOfUniq.reduce((acc,number)=>{
   return acc;
 },{});
 
-const answerOfUniq = Object.keys(countMap).filter(num => countMap[Number(num)] < 2 ).map(Number);
+const answerOfUniq = Object.keys(countMap).filter(num => countMap[num] < 2 ).map(Number);
 
 console.log(answerOfUniq);
 
