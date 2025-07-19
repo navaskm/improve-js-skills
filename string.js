@@ -37,3 +37,17 @@ wordsArray2.sort((word1,word2)=>{
 
 const originalString2 = wordsArray2.join(" ");
 console.log(originalString2);
+
+
+
+////////////////////////////////////////////////////////////////////////////////
+
+
+// find count of vowels in the string;
+const string = 'hello world';
+const vowels = ['a', 'e', 'i', 'o', 'u'];
+
+const arrayOfString = string.toLowerCase().split('');
+const countOfVowels = arrayOfString.filter(char => vowels.includes(char)).length;
+
+console.log(countOfVowels);
