@@ -22,3 +22,24 @@ const arrayTwo = [2,4,4,6,8,10,11];
 const mergedArray = [...new Set([...arrayOne,...arrayTwo])];
 const sortedUniqueArray = mergedArray.sort((a, b) => a-b );
 console.log(sortedUniqueArray);
+
+
+
+//////////////////////////////////////////////////////
+
+
+// find missing number in the array
+const missingNumberArray = [1,2,4,5,6,10];
+
+const maxValue = Math.max(...missingNumberArray);
+const minValue = Math.min(...missingNumberArray);
+
+const arrayOfMissingNumber=[]
+
+for(i=minValue; i<maxValue; i++){
+  if(!missingNumberArray.includes(i)){
+    arrayOfMissingNumber.push(i);
+  }
+}
+
+console.log(arrayOfMissingNumber);
