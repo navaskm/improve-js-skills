@@ -43,3 +43,19 @@ for(i=minValue; i<maxValue; i++){
 }
 
 console.log(arrayOfMissingNumber);
+
+
+/////////////////////////////////////////////////////////////
+
+
+// This script finds and prints the unique (non-repeating) numbers from an array using a frequency count approach.
+const stringArray = ['Arjun','Navas','Arjun','Sanu','Navas'];
+
+const object = stringArray.reduce((acc,name)=>{
+  acc[name] = (acc[name] || 0) +1;
+  return acc;
+},{});
+
+const answerOfUniqTwo = Object.keys(object).filter(name => object[name] === 1);
+
+console.log(answerOfUniqTwo);
