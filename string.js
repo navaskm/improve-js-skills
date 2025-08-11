@@ -51,3 +51,19 @@ const arrayOfString = string.toLowerCase().split('');
 const countOfVowels = arrayOfString.filter(char => vowels.includes(char)).length;
 
 console.log(countOfVowels);
+
+
+
+////////////////////////////////////////////////////////////////////
+
+
+// Reverse each word and each letter
+const stringTwo = 'i am navas';
+
+const reversedWordArray = stringTwo.split(' ').reverse();
+
+const answer = reversedWordArray.map(elem => {
+  return elem.split('').reverse().join('');
+});
+
+console.log(answer.join(' '));
