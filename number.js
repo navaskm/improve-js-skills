@@ -24,3 +24,15 @@ function factorial(n) {
 }
 
 console.log(factorial(5));
+
+
+//////////////////////////////////////////////////////////////////
+
+
+// sum large two number in the array
+const sumTopTwoNumbers = arr => {
+  const sorted = [...arr].sort((a, b) => b - a);
+  return sorted[0] + sorted[1];
+};
+
+console.log(sumTopTwoNumbers([4, -1, 2, 1, 9, 3]));
