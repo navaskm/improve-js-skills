@@ -67,3 +67,24 @@ const answer = reversedWordArray.map(elem => {
 });
 
 console.log(answer.join(' '));
+
+
+////////////////////////////////////////////////////////////
+
+
+// find first non-repeating character
+const firstNonRepeatingChar = word => {
+
+  const arrayOfLetter = word.split('');
+
+  for(const letter of arrayOfLetter){
+    if(arrayOfLetter.indexOf(letter) === arrayOfLetter.lastIndexOf(letter)){
+      return letter
+    }
+  }
+
+  return null;
+}
+
+console.log(firstNonRepeatingChar("swiss"));
+console.log(firstNonRepeatingChar("aabb"));
