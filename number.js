@@ -12,3 +12,15 @@ const isPrime = (number) => {
 
 console.log(isPrime(6));
 console.log(isPrime(7));
+
+
+//////////////////////////////////////////////////////////
+
+
+// Add recursive factorial function implementation
+function factorial(n) {
+  if (n === 0) return 1;
+  return n * factorial(n - 1);
+}
+
+console.log(factorial(5));
