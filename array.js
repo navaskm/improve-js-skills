@@ -59,3 +59,27 @@ const object = stringArray.reduce((acc,name)=>{
 const answerOfUniqTwo = Object.keys(object).filter(name => object[name] === 1);
 
 console.log(answerOfUniqTwo);
+
+
+
+/////////////////////////////////////////////////////////////////////
+
+
+// it return groups same word array in the on array
+const groupAnagrams2 = (array) => {
+
+  const obj={};
+
+  for (let word of array) {
+    let key = word.split('').sort().join('');
+    
+    if (!obj[key]) {
+      obj[key]=[]
+    }
+    obj[key].push(word);
+  }
+
+  return Object.values(obj);
+};
+
+console.log(groupAnagrams2(["eat", "tea", "tan", "ate", "nat", "bat"]));
