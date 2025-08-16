@@ -88,3 +88,28 @@ const firstNonRepeatingChar = word => {
 
 console.log(firstNonRepeatingChar("swiss"));
 console.log(firstNonRepeatingChar("aabb"));
+
+
+
+/////////////////////////////////////////////////////
+
+
+// find most vowels in the word
+function mostVowels(str) {
+
+  const words = str.split(" ");
+  let maxWord = "";
+  let maxCount = 0;
+
+  for (let word of words) {
+    const count = (word.match(/[aeiou]/gi) || []).length;
+    if (count > maxCount) {
+      maxCount = count;
+      maxWord = word;
+    }
+  }
+
+  return maxWord;
+}
+
+console.log(mostVowels("JavaScript is amazing"));
