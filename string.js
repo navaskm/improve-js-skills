@@ -113,3 +113,37 @@ function mostVowels(str) {
 }
 
 console.log(mostVowels("JavaScript is amazing"));
+
+
+///////////////////////////////////////////////////////
+
+
+// Finds the length of the longest substring without repeating characters.
+//  * Example:
+//  *  - "abcabcbb" = 3 ("abc")
+//  *  - "bbbbb" = 1 ("b")
+//  *  - "pwwkew" = 3 ("wke")
+
+const longestUniqueSubstring = (word)=>{
+
+  const uniqueChars = [];
+  let topLength=0;
+
+  for(const letter of word){
+
+    if(uniqueChars.includes(letter)){
+      topLength = Math.max(topLength,uniqueChars.length);
+      uniqueChars.length=0;
+      uniqueChars.push(letter)
+    }else{
+      uniqueChars.push(letter)
+    }
+
+  }
+
+  return Math.max(topLength,uniqueChars.length);
+};
+
+console.log(longestUniqueSubstring("abcabcbb"));
+console.log(longestUniqueSubstring("bbbbb"));
+console.log(longestUniqueSubstring("pwwkew"));
