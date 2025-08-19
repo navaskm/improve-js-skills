@@ -83,3 +83,26 @@ const groupAnagrams2 = (array) => {
 };
 
 console.log(groupAnagrams2(["eat", "tea", "tan", "ate", "nat", "bat"]));
+
+
+////////////////////////////////////////////////////////////////////
+
+
+// nested array set into a single-level array ( without using flat method )
+const flatten = (array) => {
+
+  let result = [];
+
+  for (let item of array) {
+
+    if (Array.isArray(item)) {
+      result = result.concat(flatten(item));
+    } else {
+      result.push(item);
+    }
+  }
+
+  return result;
+};
+
+console.log(flatten([1, [2, [3, [4]], 5]]));
