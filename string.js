@@ -147,3 +147,28 @@ const longestUniqueSubstring = (word)=>{
 console.log(longestUniqueSubstring("abcabcbb"));
 console.log(longestUniqueSubstring("bbbbb"));
 console.log(longestUniqueSubstring("pwwkew"));
+
+
+
+////////////////////////////////////////////////////////////////
+
+
+// find first non repeating character
+const firstUniqueChar = (string) => {
+
+  const freq={}
+
+  for(const letter of string){
+    freq[letter] = (freq[letter] || 0) +1;
+  }
+
+  for(const letter of string){
+    if(freq[letter] === 1) return letter
+  }
+
+  return null;
+};
+
+console.log(firstUniqueChar("leetcode"));
+console.log(firstUniqueChar("aabbcc"));
+console.log(firstUniqueChar("javascript"));
