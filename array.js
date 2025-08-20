@@ -128,3 +128,26 @@ const topKFrequent = (array, k) => {
 console.log(topKFrequent([1,1,1,2,2,3], 2));
 console.log(topKFrequent([4,4,4,5,6,6,7,7,7,7], 2));
 console.log(topKFrequent([1], 1));
+
+
+//////////////////////////////////////////////////////////////////
+
+
+// Finds two numbers in the array that add up to a given target.
+const twoSum = (array, target) => {
+  const seen = new Map();
+
+  for (let num of array) {
+    const complement = target - num;
+
+    if (seen.has(complement)) {
+      return [complement, num];
+    }
+
+    seen.set(num);
+  }
+
+  return null;
+};
+
+console.log(twoSum([1,2,3,4,5], 8));
