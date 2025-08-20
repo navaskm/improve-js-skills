@@ -106,3 +106,25 @@ const flatten = (array) => {
 };
 
 console.log(flatten([1, [2, [3, [4]], 5]]));
+
+
+
+//////////////////////////////////////////////////////////////////////////////
+
+
+// Returns the top k(how many to return) most frequent elements from the array
+const topKFrequent = (array, k) => {
+  
+  const obj = array.reduce((acc, element) => {
+    acc[element] = (acc[element] || 0) + 1;
+    return acc;
+  }, {});
+
+  const entries = Object.entries(obj).sort((a, b) => b[1] - a[1]);
+
+  return entries.slice(0, k).map(entry => Number(entry[0]));
+};
+
+console.log(topKFrequent([1,1,1,2,2,3], 2));
+console.log(topKFrequent([4,4,4,5,6,6,7,7,7,7], 2));
+console.log(topKFrequent([1], 1));
