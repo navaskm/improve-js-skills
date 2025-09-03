@@ -172,3 +172,28 @@ const firstUniqueChar = (string) => {
 console.log(firstUniqueChar("leetcode"));
 console.log(firstUniqueChar("aabbcc"));
 console.log(firstUniqueChar("javascript"));
+
+
+
+/////////////////////////////////////////////////////
+
+
+// Longest Palindromic Substring
+function longestPalindrome(s) {
+  let longest = "";
+
+  for (let i = 0; i < s.length; i++) {
+    for (let j = i + 1; j <= s.length; j++) {
+      const sub = s.slice(i, j);
+
+      if (sub === sub.split("").reverse().join("") && sub.length > longest.length) {
+        longest = sub;
+      }
+    }
+  }
+
+  return longest;
+};
+
+console.log(longestPalindrome("babad"));
+console.log(longestPalindrome("cbbd"));
