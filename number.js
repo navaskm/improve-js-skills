@@ -36,3 +36,18 @@ const sumTopTwoNumbers = arr => {
 };
 
 console.log(sumTopTwoNumbers([4, -1, 2, 1, 9, 3]));
+
+
+
+///////////////////////////////////
+
+
+// Function to reverse digits of a number while keeping its sign 
+const reverseNumber  = (x) => {
+  const sign = Math.sign(x);
+  const reversedString = Math.abs(x).toString().split('').reverse().join('');
+  return parseInt(reversedString) * sign;
+};
+
+console.log(reverseNumber (-328))
+console.log(reverseNumber (120))
