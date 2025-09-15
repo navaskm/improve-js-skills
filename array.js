@@ -151,3 +151,29 @@ const twoSum = (array, target) => {
 };
 
 console.log(twoSum([1,2,3,4,5], 8));
+
+
+/////////////////////////////////////////////////////////////////////
+
+
+// Container With Most Water
+const containerWithMostWater = (array) => {
+
+  let leftPoint = 0;
+  let rightPoint = array.length-1;
+  let maxWater = 0;
+
+  while(leftPoint<rightPoint){
+    const width = rightPoint-leftPoint;
+    const height = Math.min(array[leftPoint], array[rightPoint]);
+    const area = width*height;
+    maxWater = Math.max(maxWater, area);
+
+    array[leftPoint] < array[rightPoint] ? leftPoint++ : rightPoint--;
+  };
+
+  return maxWater;
+};
+
+console.log(containerWithMostWater([1,8,6,2,5,4,8,3,7]));
+console.log(containerWithMostWater([1,1]));
