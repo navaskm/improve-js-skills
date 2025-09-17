@@ -177,3 +177,28 @@ const containerWithMostWater = (array) => {
 
 console.log(containerWithMostWater([1,8,6,2,5,4,8,3,7]));
 console.log(containerWithMostWater([1,1]));
+
+
+
+////////////////////////////////////////////////////////////
+
+
+// Finds two number's index in the array that add up to a given target.
+const twoSumWithIndex = (array, target) => {
+  const seen = new Map();
+
+  for (let i = 0; i < array.length; i++) {
+    const num = array[i];
+    const complement = target - num;
+
+    if (seen.has(complement)) {
+      return [seen.get(complement), i];
+    }
+
+    seen.set(num, i);
+  }
+
+  return null;
+};
+
+console.log(twoSumWithIndex([1, 2, 3, 4, 5], 8));
