@@ -51,3 +51,26 @@ const reverseNumber  = (x) => {
 
 console.log(reverseNumber (-328))
 console.log(reverseNumber (120))
+
+
+////////////////////////////////////////////////////////////////////////
+
+// Integer to Roman
+var intToRoman2 = function(num) {
+
+  const values = [['M',1000],['CM',900],['D',500],['CD',400],['C',100],['XC',90],['L',50],['XL',40],['X',10],['IX',9],['V',5],['IV',4],['I',1]];
+
+  let res = '';
+
+  for (let i = 0; i < values.length; i++) {
+    let times = Math.floor(num/values[i][1]);
+    res = res + values[i][0].repeat(times);
+    num = num % values[i][1]
+  };
+
+  return res;
+};
+
+console.log(intToRoman2(3749));
+console.log(intToRoman2(58));
+console.log(intToRoman2(9));
