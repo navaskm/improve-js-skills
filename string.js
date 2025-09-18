@@ -126,27 +126,26 @@ console.log(mostVowels("JavaScript is amazing"));
 
 const longestUniqueSubstring = (word)=>{
 
-  const uniqueChars = [];
-  let topLength=0;
+  let seen = new Map();
+  let start = 0;
+  let maxLength = 0;
 
-  for(const letter of word){
+  for (let i = 0; i < word.length; i++) {
+    const letter = word[i];
 
-    if(uniqueChars.includes(letter)){
-      topLength = Math.max(topLength,uniqueChars.length);
-      uniqueChars.length=0;
-      uniqueChars.push(letter)
-    }else{
-      uniqueChars.push(letter)
-    }
+    if (seen.has(letter) && seen.get(letter) >= start) {
+      start = seen.get(letter) + 1;
+    };
 
-  }
+    seen.set(letter, i);
+    maxLength = Math.max(maxLength, i - start + 1);
+  };
 
-  return Math.max(topLength,uniqueChars.length);
+  return maxLength;
 };
-
 console.log(longestUniqueSubstring("abcabcbb"));
 console.log(longestUniqueSubstring("bbbbb"));
-console.log(longestUniqueSubstring("pwwkew"));
+console.log(longestUniqueSubstring("dvdf"));
 
 
 
