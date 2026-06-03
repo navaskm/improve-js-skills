@@ -75,10 +75,8 @@ console.log(answer.join(' '));
 // find first non-repeating character
 const firstNonRepeatingChar = word => {
 
-  const arrayOfLetter = word.split('');
-
-  for(const letter of arrayOfLetter){
-    if(arrayOfLetter.indexOf(letter) === arrayOfLetter.lastIndexOf(letter)){
+  for(const letter of word){
+    if(word.indexOf(letter) === word.lastIndexOf(letter)){
       return letter
     }
   }
@@ -86,7 +84,7 @@ const firstNonRepeatingChar = word => {
   return null;
 }
 
-console.log(firstNonRepeatingChar("swiss"));
+console.log(firstNonRepeatingChar("swiss"),'ji');
 console.log(firstNonRepeatingChar("aabb"));
 
 
