@@ -202,3 +202,29 @@ const twoSumWithIndex = (array, target) => {
 };
 
 console.log(twoSumWithIndex([1, 2, 3, 4, 5], 8));
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+// Find the intersection of two arrays
+// Return the common elements found in both arrays.
+// Expected Output:
+// [3, 4]
+// []
+console.log(arrayIntersection([1, 2, 3, 4], [3, 4, 5, 6]));
+console.log(arrayIntersection([10, 20, 30], [40, 50]));
+
+function arrayIntersection(arrayOne, arrayTwo) {
+
+  const sameValuesArray = [];
+
+  for(const num of arrayOne){
+    if(arrayTwo.includes(num)){
+      sameValuesArray.push(num);
+    }
+  };
+
+  return sameValuesArray;
+};

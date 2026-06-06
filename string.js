@@ -84,7 +84,7 @@ const firstNonRepeatingChar = word => {
   return null;
 }
 
-console.log(firstNonRepeatingChar("swiss"),'ji');
+console.log(firstNonRepeatingChar("swiss"));
 console.log(firstNonRepeatingChar("aabb"));
 
 
@@ -194,3 +194,24 @@ function longestPalindrome(s) {
 
 console.log(longestPalindrome("babad"));
 console.log(longestPalindrome("cbbd"));
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+
+
+// Check whether two strings are anagrams
+// Two strings are anagrams if they contain the same letters
+// in the same quantities, regardless of order.
+// Expected Output:
+// true
+// false
+
+const isAnagram = (stringOne, stringTwo) => {
+  const sortedStringOne = stringOne.split('').sort().join('');
+  const sortedStringTwo = stringTwo.split('').sort().join('');
+  return sortedStringOne === sortedStringTwo;
+};
+
+console.log(isAnagram("listen", "silent"));
+console.log(isAnagram("hello", "world"));

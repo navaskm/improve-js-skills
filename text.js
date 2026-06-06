@@ -42,6 +42,14 @@ const groupAnagrams = ["eat", "tea", "tan", "ate", "nat", "bat"];
 // Finds two number's index in the array that add up to a given target.
 // console.log(twoSumWithIndex([1, 2, 3, 4, 5], 8));
 
+// Find the intersection of two arrays
+// Return the common elements found in both arrays.
+// Expected Output:
+// [3, 4]
+// []
+// console.log(arrayIntersection([1, 2, 3, 4], [3, 4, 5, 6]));
+// console.log(arrayIntersection([10, 20, 30], [40, 50]));
+
 
 
 
@@ -108,10 +116,76 @@ const firstNonRepeatingCharTwo = "aabb"
 
 
 
+// Check whether two strings are anagrams
+// Two strings are anagrams if they contain the same letters
+// in the same quantities, regardless of order.
+// Expected Output:
+// true
+// false
+// console.log(isAnagram("listen", "silent"));
+// console.log(isAnagram("hello", "world"));
+
+
+
+
+
+// NUMBER TESTING
 ///////////////////////////////////////////////////////////////////////////////////////////
 
 
+// check prime number or not
+// console.log(isPrime(6));
+// console.log(isPrime(7));
 
+
+
+// Add recursive factorial function implementation
+// console.log(factorial(5));
+
+
+
+// sum large two number in the array
+// console.log(sumTopTwoNumbers([4, -1, 2, 1, 9, 3]));
+
+
+
+// Function to reverse digits of a number while keeping its sign
+// console.log(reverseNumber (-328))
+// console.log(reverseNumber (120))
+
+
+
+
+
+// OBJECT TESTING
+////////////////////////////////////////////////////////////////////////////
+
+
+// Count how many times each character appears in a string
+// Return an object with character frequencies.
+// console.log(charFrequency("hello"));
+// console.log(charFrequency("javascript"));
+// Expected Output:
+// { h: 1, e: 1, l: 2, o: 1 }
+// { j: 1, a: 2, v: 1, s: 1, c: 1, r: 1, i: 1, p: 1, t: 1 }
+
+
+
+// Group array elements by their type
+// Return an object where the keys are the data types
+// and the values are arrays of elements of that type.
+// Expected Output:
+// {
+//   number: [1, 42],
+//   string: ["hello", "world"],
+//   boolean: [true, false]
+// }
+
+
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////
 // GUESS THE OUTPUT FIRST THEN RUN THE CODE
 // var p1 = new Promise((success, fail) => {
 //   setTimeout(()=>{
@@ -137,3 +211,9 @@ const firstNonRepeatingCharTwo = "aabb"
 // }));
 
 // p3.then(() => console.log(5));
+
+
+
+
+
+
