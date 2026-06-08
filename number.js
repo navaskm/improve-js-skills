@@ -74,3 +74,28 @@ var intToRoman2 = function(num) {
 console.log(intToRoman2(3749));
 console.log(intToRoman2(58));
 console.log(intToRoman2(9));
+
+
+
+///////////////////////////////////////////////////////////////////////////////
+
+
+// Find the average of all numbers in an array
+// Return 0 for an empty array.
+// Expected Output:
+// 3
+// 15
+// 0
+
+const average = arr => {
+
+  const totalValue = arr.reduce((acc, num) => {
+    return acc += num;
+  },0);
+
+  return totalValue / arr.length || 0;
+}
+
+console.log(average([1, 2, 3, 4, 5]));
+console.log(average([10, 20]));
+console.log(average([]));

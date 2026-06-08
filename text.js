@@ -52,6 +52,118 @@ const groupAnagrams = ["eat", "tea", "tan", "ate", "nat", "bat"];
 
 
 
+// Find the most frequent element in an array
+// If multiple elements have the same highest frequency,
+// return the one that appears first.
+// Find the most frequent element in an array
+// If multiple elements have the same highest frequency,
+// return the one that appears first.
+// Expected Output:
+// 2
+// "a"
+// console.log(mostFrequent([1, 2, 2, 3, 1, 2]));
+// console.log(mostFrequent(["a", "b", "a", "c", "a", "b"]));
+
+
+
+// Move all zeros to the end of an array
+// Keep the order of non-zero elements unchanged.
+// Expected Output:
+// [1, 3, 12, 0, 0]
+// [1, 2, 3, 4, 0, 0]
+// console.log(moveZeros([0, 1, 0, 3, 12]));
+// console.log(moveZeros([1, 2, 0, 0, 3, 4]));
+
+
+
+// Find the longest consecutive sequence length in an array
+// The numbers do not need to be sorted.
+//
+// Example:
+// [100, 4, 200, 1, 3, 2]
+//
+// Consecutive sequence: 1, 2, 3, 4
+// Length = 4
+//
+// Expected Output:
+// 4
+// 9
+// console.log(longestConsecutive([100, 4, 200, 1, 3, 2])); // 4
+// console.log(longestConsecutive([0, 3, 7, 2, 5, 8, 4, 6, 0, 1])); // 9
+
+
+
+// Find the difference between two arrays
+// Return elements that exist in the first array
+// but not in the second array.
+// Expected Output:
+// [1, 3]
+// ["a", "c"]
+// console.log(arrayDifference([1, 2, 3, 4], [2, 4]));
+// console.log(arrayDifference(["a", "b", "c"], ["b"]));
+
+
+
+// Check whether an array is sorted in ascending order
+// Return true if every element is greater than or equal
+// to the previous element.
+// console.log(isSorted([1, 2, 3, 4, 5]));
+// console.log(isSorted([1, 3, 2, 4, 5]));
+// console.log(isSorted([5, 5, 5, 5]));
+// Expected Output:
+// true
+// false
+// true
+
+
+
+// Rotate an array to the right by k positions
+// Expected Output:
+// [4, 5, 1, 2, 3]
+// [3, 4, 5, 1, 2]
+// console.log(rotateArray([1, 2, 3, 4, 5], 2));
+// console.log(rotateArray([1, 2, 3, 4, 5], 3));
+
+
+
+// Check whether two arrays contain exactly the same elements
+// in the same order.
+// Expected Output:
+// true
+// false
+// true
+// false
+// console.log(arraysEqual([1, 2, 3], [1, 2, 3]));
+// console.log(arraysEqual([1, 2, 3], [3, 2, 1]));
+// console.log(arraysEqual(["a", "b"], ["a", "b"]));
+// console.log(arraysEqual(["a", "b"], ["a", "c"]));
+
+
+
+// Find the element that appears only once
+// Every other element appears exactly twice.
+// Expected Output:
+// 1
+// 4
+// 3
+// console.log(singleNumber([2, 2, 1]));
+// console.log(singleNumber([4, 1, 2, 1, 2]));
+// console.log(singleNumber([7, 3, 7]));
+
+
+
+// Find the longest common prefix among an array of strings
+// Return "" if there is no common prefix.
+// Expected Output:
+// "fl"
+// ""
+// "inters"
+// console.log(longestCommonPrefix(["flower", "flow", "flight"]));
+// console.log(longestCommonPrefix(["dog", "racecar", "car"]));
+// console.log(longestCommonPrefix(["interspecies", "interstellar", "interstate"]));
+
+
+
 
 
 // STRING TESTING
@@ -127,6 +239,18 @@ const firstNonRepeatingCharTwo = "aabb"
 
 
 
+// Capitalize the first letter of each word in a sentence
+// Return the modified sentence.
+// Expected Output:
+// "Hello World"
+// "Javascript Is Fun"
+// "I Am Learning React"
+// console.log(capitalizeWords("hello world"));
+// console.log(capitalizeWords("javascript is fun"));
+// console.log(capitalizeWords("i am learning react"));
+
+
+
 
 
 // NUMBER TESTING
@@ -152,6 +276,18 @@ const firstNonRepeatingCharTwo = "aabb"
 // Function to reverse digits of a number while keeping its sign
 // console.log(reverseNumber (-328))
 // console.log(reverseNumber (120))
+
+
+
+// Find the average of all numbers in an array
+// Return 0 for an empty array.
+// Expected Output:
+// 3
+// 15
+// 0
+// console.log(average([1, 2, 3, 4, 5]));
+// console.log(average([10, 20]));
+// console.log(average([]));
 
 
 
@@ -217,3 +353,12 @@ const firstNonRepeatingCharTwo = "aabb"
 
 
 
+// Find the longest common prefix among an array of strings
+// Return "" if there is no common prefix.
+// Expected Output:
+// "fl"
+// ""
+// "inters"
+// console.log(longestCommonPrefix(["flower", "flow", "flight"]));
+// console.log(longestCommonPrefix(["dog", "racecar", "car"]));
+// console.log(longestCommonPrefix(["interspecies", "interstellar", "interstate"]));

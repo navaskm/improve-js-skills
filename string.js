@@ -215,3 +215,26 @@ const isAnagram = (stringOne, stringTwo) => {
 
 console.log(isAnagram("listen", "silent"));
 console.log(isAnagram("hello", "world"));
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+
+
+// Capitalize the first letter of each word in a sentence
+// Return the modified sentence.
+// Expected Output:
+// "Hello World"
+// "Javascript Is Fun"
+// "I Am Learning React"
+
+const capitalizeWords = str => {
+  return str
+    .split(' ')
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(' ');
+};
+
+console.log(capitalizeWords("hello world"));
+console.log(capitalizeWords("javascript is fun"));
+console.log(capitalizeWords("i am learning react"));
