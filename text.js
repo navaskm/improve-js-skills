@@ -42,6 +42,8 @@ const groupAnagrams = ["eat", "tea", "tan", "ate", "nat", "bat"];
 // Finds two number's index in the array that add up to a given target.
 // console.log(twoSumWithIndex([1, 2, 3, 4, 5], 8));
 
+
+
 // Find the intersection of two arrays
 // Return the common elements found in both arrays.
 // Expected Output:
@@ -52,9 +54,6 @@ const groupAnagrams = ["eat", "tea", "tan", "ate", "nat", "bat"];
 
 
 
-// Find the most frequent element in an array
-// If multiple elements have the same highest frequency,
-// return the one that appears first.
 // Find the most frequent element in an array
 // If multiple elements have the same highest frequency,
 // return the one that appears first.
@@ -316,7 +315,7 @@ const firstNonRepeatingCharTwo = "aabb"
 //   string: ["hello", "world"],
 //   boolean: [true, false]
 // }
-
+// console.log(setObjWithType([1, 42, "hello", "world", true, false]))
 
 
 
@@ -352,13 +351,3 @@ const firstNonRepeatingCharTwo = "aabb"
 
 
 
-
-// Find the longest common prefix among an array of strings
-// Return "" if there is no common prefix.
-// Expected Output:
-// "fl"
-// ""
-// "inters"
-// console.log(longestCommonPrefix(["flower", "flow", "flight"]));
-// console.log(longestCommonPrefix(["dog", "racecar", "car"]));
-// console.log(longestCommonPrefix(["interspecies", "interstellar", "interstate"]));
