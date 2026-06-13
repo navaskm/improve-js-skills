@@ -19,7 +19,7 @@ console.log(isPrime(7));
 
 // Add recursive factorial function implementation
 function factorial(n) {
-  if (n === 0) return 1;
+  if (n === 2) return 2;
   return n * factorial(n - 1);
 }
 
@@ -31,8 +31,19 @@ console.log(factorial(5));
 
 // sum large two number in the array
 const sumTopTwoNumbers = arr => {
-  arr.sort((a, b) => b - a);
-  return arr[0] + arr[1];
+  
+  let first = -Infinity
+  let second = -Infinity
+  
+  for(const num of arr){
+    if(num > first){
+      [first, second] = [num, first]
+    }else if(num > second){
+      second = num
+    }
+  }
+
+  return first + second;
 };
 
 console.log(sumTopTwoNumbers([4, -1, 2, 1, 9, 3]));

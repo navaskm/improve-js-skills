@@ -476,3 +476,32 @@ const longestCommonPrefix = arr => {
 console.log(longestCommonPrefix(["flower", "flow", "flight"]));
 console.log(longestCommonPrefix(["dog", "racecar", "car"]));
 console.log(longestCommonPrefix(["interspecies", "interstellar", "interstate"]));
+
+
+
+////////////////////////////////////////////////////////////////////////////////////
+
+
+// Find the first missing positive integer
+// The array may contain negative numbers and duplicates.
+//
+const firstMissingPositive = arr => {
+
+  const obj = new Set(arr)
+  let num = 1
+
+  while (obj.has(num)) {
+    num++;
+  }
+
+  return num
+}
+
+console.log(firstMissingPositive([1, 2, 0]));
+console.log(firstMissingPositive([3, 4, -1, 1]));
+console.log(firstMissingPositive([7, 8, 9, 11, 12]));
+//
+// Expected Output:
+// 3
+// 2
+// 1

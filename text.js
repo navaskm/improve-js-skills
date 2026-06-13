@@ -163,6 +163,18 @@ const groupAnagrams = ["eat", "tea", "tan", "ate", "nat", "bat"];
 
 
 
+// Find the first missing positive integer
+// The array may contain negative numbers and duplicates.
+// console.log(firstMissingPositive([1, 2, 0]));
+// console.log(firstMissingPositive([3, 4, -1, 1]));
+// console.log(firstMissingPositive([7, 8, 9, 11, 12]));
+// Expected Output:
+// 3
+// 2
+// 1
+
+
+
 
 
 // STRING TESTING
@@ -247,6 +259,33 @@ const firstNonRepeatingCharTwo = "aabb"
 // console.log(capitalizeWords("hello world"));
 // console.log(capitalizeWords("javascript is fun"));
 // console.log(capitalizeWords("i am learning react"));
+
+
+
+// Check if one string is a rotation of another
+// A rotation moves characters from the front to the end.
+//
+// console.log(isRotation("waterbottle", "erbottlewat"));
+// console.log(isRotation("hello", "llohe"));
+// console.log(isRotation("hello", "olelh"));
+//
+// Expected Output:
+// true
+// true
+// false
+
+
+
+// Compress a string using character counts
+// Consecutive repeated characters should be replaced
+// with the character followed by its count.
+// console.log(compressString("aabcccccaaa"));
+// console.log(compressString("abc"));
+// console.log(compressString("aaabb"));
+// Output:
+// "a2b1c5a3"
+// "a1b1c1"
+// "a3b2"
 
 
 

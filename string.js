@@ -79,14 +79,19 @@ console.log(answer.join(' '));
 // find first non-repeating character
 const firstNonRepeatingChar = word => {
 
+  const objOfWord = [...word].reduce((acc, letter) => {
+    acc[letter] = (acc[letter] || 0) + 1;
+    return acc;
+  },{});
+
   for(const letter of word){
-    if(word.indexOf(letter) === word.lastIndexOf(letter)){
+    if(objOfWord[letter] === 1){
       return letter
-    }
-  }
+    };
+  };
 
   return null;
-}
+};
 
 console.log(firstNonRepeatingChar("swiss"));
 console.log(firstNonRepeatingChar("aabb"));
@@ -242,3 +247,57 @@ const capitalizeWords = str => {
 console.log(capitalizeWords("hello world"));
 console.log(capitalizeWords("javascript is fun"));
 console.log(capitalizeWords("i am learning react"));
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+// Check if one string is a rotation of another
+// A rotation moves characters from the front to the end.
+//
+const isRotation = (strOne, strTwo) =>  (strOne + strOne).includes(strTwo);
+
+console.log(isRotation("waterbottle", "erbottlewat"));
+console.log(isRotation("hello", "llohe"));
+console.log(isRotation("hello", "olelh"));
+//
+// Expected Output:
+// true
+// true
+// false
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+
+
+// Compress a string using character counts
+// Consecutive repeated characters should be replaced
+// with the character followed by its count.
+//
+const compressString = str => {
+
+  let newStr = '';
+  let current = 1;
+
+  for (let i = 0; i < str.length; i++) {
+
+    if(str[i] === str[i + 1]){
+      current++
+    }else{
+      newStr += str[i] + current
+      current = 1
+    }
+  }
+
+  return newStr
+}
+console.log(compressString("aabcccccaaa"));
+console.log(compressString("abc"));
+console.log(compressString("aaabb"));
+//
+// Expected Output:
+// "a2b1c5a3"
+// "a1b1c1"
+// "a3b2"
