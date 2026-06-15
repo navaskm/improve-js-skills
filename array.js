@@ -505,3 +505,30 @@ console.log(firstMissingPositive([7, 8, 9, 11, 12]));
 // 3
 // 2
 // 1
+
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////
+
+
+// You are given an array where each element represents a stock price on that day.
+// Find the maximum profit you can make by buying once and selling once.
+const maxProfit = arr => {
+
+  let minPrice = Infinity;
+  let maxProfit = 0;
+
+  for (const price of arr) {
+    if (price < minPrice) {
+      minPrice = price;
+    } else {
+      maxProfit = Math.max(maxProfit, price - minPrice);
+    }
+  }
+
+  return maxProfit;
+};
+console.log(maxProfit([7, 1, 5, 3, 6, 4])); // 5
+console.log(maxProfit([7, 6, 4, 3, 1])); // 0
+console.log(maxProfit([2, 4, 1])); // 2

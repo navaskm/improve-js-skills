@@ -175,6 +175,14 @@ const groupAnagrams = ["eat", "tea", "tan", "ate", "nat", "bat"];
 
 
 
+// You are given an array where each element represents a stock price on that day.
+// Find the maximum profit you can make by buying once and selling once.
+// console.log(maxProfit([7, 1, 5, 3, 6, 4])); // 5
+// console.log(maxProfit([7, 6, 4, 3, 1])); // 0
+// console.log(maxProfit([2, 4, 1])); // 2
+
+
+
 
 
 // STRING TESTING
@@ -286,6 +294,35 @@ const firstNonRepeatingCharTwo = "aabb"
 // "a2b1c5a3"
 // "a1b1c1"
 // "a3b2"
+
+
+
+// Check whether a string is a valid palindrome
+// Ignore spaces, punctuation, and letter casing.
+// console.log(isValidPalindrome("A man, a plan, a canal: Panama"));
+// console.log(isValidPalindrome("race a car"));
+// console.log(isValidPalindrome("Was it a car or a cat I saw?"));
+// Expected Output:
+// true
+// false
+// true
+
+
+
+// Check if two strings are one edit away
+// An edit is:
+// - insert one character
+// - delete one character
+// - replace one character
+// console.log(oneEditAway("pale", "ple"));
+// console.log(oneEditAway("pales", "pale"));
+// console.log(oneEditAway("pale", "bale"));
+// console.log(oneEditAway("pale", "bake"));
+// Expected Output:
+// true
+// true
+// true
+// false
 
 
 

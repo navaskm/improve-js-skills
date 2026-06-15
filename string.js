@@ -301,3 +301,82 @@ console.log(compressString("aaabb"));
 // "a2b1c5a3"
 // "a1b1c1"
 // "a3b2"
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////
+
+
+// Check whether a string is a valid palindrome
+// Ignore spaces, punctuation, and letter casing.
+//
+const isValidPalindrome = str => {
+  const newStr = str.toLocaleLowerCase().replace(/[^a-z0-9]/g, "");
+
+  return newStr === newStr.split('').reverse().join('')
+}
+console.log(isValidPalindrome("A man, a plan, a canal: Panama"));
+console.log(isValidPalindrome("race a car"));
+console.log(isValidPalindrome("Was it a car or a cat I saw?"));
+//
+// Expected Output:
+// true
+// false
+// true
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////
+
+
+// Check if two strings are one edit away
+// An edit is:
+// - insert one character
+// - delete one character
+// - replace one character
+//
+const oneEditAway = (strOne, strTwo) => {
+  
+  if (Math.abs(strOne.length - strTwo.length) > 1) {
+    return false;
+  }
+
+  let edits = 0;
+  let i = 0;
+  let j = 0;
+
+  while (i < strOne.length && j < strTwo.length) {
+    if (strOne[i] !== strTwo[j]) {
+      edits++;
+
+      if (edits > 1) {
+        return false;
+      }
+
+      if (strOne.length > strTwo.length) {
+        i++;
+      } else if (strTwo.length > strOne.length) {
+        j++;
+      } else {
+        i++;
+        j++;
+      }
+    } else {
+      i++;
+      j++;
+    }
+  }
+
+  return true;
+};
+
+console.log(oneEditAway("pale", "ple"));
+console.log(oneEditAway("pales", "pale"));
+console.log(oneEditAway("pale", "bale"));
+console.log(oneEditAway("pale", "bake"));
+//
+// Expected Output:
+// true
+// true
+// true
+// false
