@@ -2,11 +2,17 @@
 const arrayOfUniq = [1, 2, 1, 3, 1, 4, 2, 5, 4];
 
 const countMap = arrayOfUniq.reduce((acc,number)=>{
-  acc[number] = (acc[number] || 0) +1;
+  acc[number] = (acc[number] || 0) + 1;
   return acc;
 },{});
 
-const answerOfUniq = Object.keys(countMap).filter(num => countMap[num] < 2 ).map(Number);
+const answerOfUniq = [];
+
+for(const key in countMap){
+  if(countMap[key] === 1){
+    answerOfUniq.push(Number(key))
+  }
+}
 
 console.log(answerOfUniq);
 
@@ -33,11 +39,12 @@ const missingNumberArray = [1,2,4,5,6,10];
 
 const maxValue = Math.max(...missingNumberArray);
 const minValue = Math.min(...missingNumberArray);
+const newObjOfMissingNumberArray = new Set(missingNumberArray)
 
 const arrayOfMissingNumber=[]
 
 for(i=minValue; i<maxValue; i++){
-  if(!missingNumberArray.includes(i)){
+  if(!newObjOfMissingNumberArray.has(i)){
     arrayOfMissingNumber.push(i);
   }
 }
@@ -213,11 +220,12 @@ console.log(twoSumWithIndex([1, 2, 3, 4, 5], 8));
 // Expected Output:
 // [3, 4]
 // []
+console.log('//////////////////////////////////////////////////////////////')
 console.log(arrayIntersection([1, 2, 3, 4], [3, 4, 5, 6]));
 console.log(arrayIntersection([10, 20, 30], [40, 50]));
 
 function arrayIntersection(arrayOne, arrayTwo) {
-  const obj = new Set([...arrayTwo]);
+  const obj = new Set(arrayTwo);
   return arrayOne.filter(value => obj.has(value));
 };
 

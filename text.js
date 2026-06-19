@@ -397,6 +397,41 @@ const firstNonRepeatingCharTwo = "aabb"
 
 
 //////////////////////////////////////////////////////////////////////////////////////
+
+
+// Execution Context
+//   - Global Execution Context
+//   - Function Execution Context
+//      - Memory Creation Phase
+//      - Code Execution Phase
+
+// Call Stack
+//   - Stack Overflow
+//   - RangeError
+
+// Hoisting
+//   - var (creates undefined)
+//   - let (creates <uninitialized>)
+//   - const (creates <uninitialized>)
+//   - Function Declaration (fully stored)
+//   - Function Expression (like variable)
+
+// Scope
+//   - Global Scope
+//   - Function Scope
+//   - Block Scope
+//   - Lexical Scope
+//   - Scope Chain
+
+// Closures
+
+//   - Event Loop
+//   - Callback Queue
+//   - Microtask Queue
+
+
+
+
 // GUESS THE OUTPUT FIRST THEN RUN THE CODE
 // var p1 = new Promise((success, fail) => {
 //   setTimeout(()=>{
@@ -422,8 +457,3 @@ const firstNonRepeatingCharTwo = "aabb"
 // }));
 
 // p3.then(() => console.log(5));
-
-
-
-
-
