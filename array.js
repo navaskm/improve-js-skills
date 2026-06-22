@@ -442,6 +442,9 @@ console.log(arraysEqual(["a", "b"], ["a", "c"]));
 // 1
 // 4
 // 3
+// XOR = Exclusive OR ( ^ bitwise operator (compares bits))
+// XOR returns 1 when the bits are different.
+// XOR returns 0 when the bits are the same.
 
 const singleNumber = arr => {
   return arr.reduce((acc, num) => acc ^ num, 0);

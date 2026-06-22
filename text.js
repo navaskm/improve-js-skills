@@ -425,7 +425,7 @@ const firstNonRepeatingCharTwo = "aabb"
 
 // Closures
 
-//   - Event Loop
+// Event Loop
 //   - Callback Queue
 //   - Microtask Queue
 
@@ -457,3 +457,102 @@ const firstNonRepeatingCharTwo = "aabb"
 // }));
 
 // p3.then(() => console.log(5));
+
+
+
+
+
+//////////// JAVASCRIPT IMPORTANT SECTIONS //////////
+
+// CLOSURE
+//A closure is when a function remembers variables from its outer scope, even after the outer function has finished executing.
+
+
+
+// SYNCHRONOUS
+//Synchronous code executes line by line. JavaScript waits for one operation to finish before moving to the next operation.
+//Synchronous code runs one line at a time in sequence. JavaScript waits for the current task to finish before moving to the next task.
+// Synchronous code runs one step at a time.
+// JavaScript finishes the current task before starting the next task.
+
+
+
+// ASYNCHRONOUS
+//Asynchronous code does not block the execution of other code. JavaScript can continue executing the next lines while waiting for an asynchronous operation to complete.
+// JavaScript does not wait for the task to finish.
+// It continues running the next lines of code
+
+
+
+//JavaScript is single-threaded. Synchronous code executes line by line on the Call Stack. Asynchronous operations such as setTimeout, fetch, and event listeners are handled outside the Call Stack. When they complete, their callbacks are queued and executed later.
+
+
+
+// HOW JAVASCRIPT CODE EXECUTES
+//JavaScript executes code using an Execution Context and a Call Stack. When a JavaScript program starts, JavaScript creates a Global Execution Context. Every Execution Context has two phases: Memory Creation Phase and Code Execution Phase.
+
+
+
+// MEMORY CREATION PHASE
+// In the Memory Creation Phase, JavaScript allocates memory for variables and functions. Variables declared with var are initialized with undefined, and function declarations are stored completely in memory.
+
+
+
+// CODE EXECUTION PHASE
+// In the Code Execution Phase, JavaScript executes the code line by line and assigns actual values to variables.
+
+
+
+// GLOBAL EXECUTION CONTEXT
+// When a JavaScript file starts running, JavaScript creates a Global Execution Context. All global code executes inside this context.
+
+
+
+// FUNCTION EXECUTION CONTEXT
+// Whenever a function is called, JavaScript creates a new Function Execution Context for that function.
+
+
+
+// CALL STACK
+// JavaScript uses a Call Stack to manage function execution. When a function is called, it is pushed onto the stack. When the function finishes, it is removed from the stack. The Call Stack follows the Last In, First Out (LIFO) principle.
+
+
+
+// STACK OVERFLOW
+// If functions keep calling themselves without stopping, the Call Stack keeps growing and eventually exceeds its limit. This causes a Stack Overflow error.
+
+
+
+//You can memorize this:
+// JavaScript executes code using an Execution Context and a Call Stack. When a program starts, JavaScript creates a Global Execution Context. Each Execution Context has two phases: Memory Creation Phase and Code Execution Phase. In the Memory Creation Phase, memory is allocated for variables and functions. In the Code Execution Phase, code runs line by line. When a function is called, JavaScript creates a Function Execution Context and pushes it onto the Call Stack. After the function finishes, it is removed from the stack. If the stack grows too much because of infinite function calls, JavaScript throws a RangeError called Stack Overflow.
+
+
+
+// WHAT IS THE EVENT LOOP?
+// The Event Loop is a mechanism in JavaScript that checks whether the Call Stack is empty. When the Call Stack becomes empty, it moves pending asynchronous tasks from queues to the Call Stack for execution.
+
+
+
+//The Event Loop is a JavaScript mechanism that continuously checks whether the Call Stack is empty. When the stack becomes empty, it moves pending asynchronous callbacks from the Callback Queue (or Microtask Queue) to the Call Stack so they can be executed. This allows JavaScript, which is single-threaded, to handle asynchronous operations without blocking the main thread.
+
+
+
+//JavaScript is single-threaded, so it can execute only one task at a time. The Event Loop helps JavaScript handle asynchronous operations like setTimeout, fetch, and event listeners without blocking the main thread.
+
+// The Event Loop is a mechanism that continuously checks whether the Call Stack is empty. When it is empty, the Event Loop moves pending asynchronous tasks to the Call Stack for execution. JavaScript uses two main queues: the Microtask Queue and the Callback Queue. Promise callbacks are stored in the Microtask Queue, while setTimeout and event listener callbacks are stored in the Callback Queue. The Event Loop always executes all Microtasks first and then processes the Callback Queue.
+
+
+
+// WHAT IS CALLBACK QUEUE?
+// The Callback Queue stores callbacks from asynchronous operations such as setTimeout, setInterval, and event listeners.When the Call Stack is empty, the Event Loop moves these callbacks to the Call Stack.
+
+
+
+// WHAT IS MICROTASK QUEUE?
+// The Microtask Queue stores callbacks from Promises, such as .then(), .catch(), and .finally(). The Microtask Queue has higher priority than the Callback Queue.
+//When the Call Stack becomes empty, JavaScript first executes all tasks in the Microtask Queue and then executes tasks from the Callback Queue.
+
+
+
+//Very Short Version (20 Seconds)
+// The Event Loop helps JavaScript handle asynchronous operations. It checks if the Call Stack is empty and then moves tasks from the Microtask Queue and Callback Queue to the Call Stack. Microtasks, such as Promise callbacks, run before Callback Queue tasks like setTimeout.
