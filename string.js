@@ -46,14 +46,7 @@ console.log(originalString2);
 // find count of vowels in the string;
 const string = 'hello world';
 
-const objOfVowels = new Set(['a', 'e', 'i', 'o', 'u']);
-
-let countOfIncludeVowels = 0;
-
-for(const letter of string){
-  if(objOfVowels.has(letter)) countOfIncludeVowels++
-}
-
+const countOfIncludeVowels = string.match(/[aeiou]/gi).length
 console.log(countOfIncludeVowels);
 
 
