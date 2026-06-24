@@ -570,3 +570,39 @@ const firstNonRepeatingCharTwo = "aabb"
 
 //Very Short Version (20 Seconds)
 // The Event Loop helps JavaScript handle asynchronous operations. It checks if the Call Stack is empty and then moves tasks from the Microtask Queue and Callback Queue to the Call Stack. Microtasks, such as Promise callbacks, run before Callback Queue tasks like setTimeout.
+
+
+
+// WHAT IS PROMISE?
+// A Promise is an object that represents a future result of an asynchronous operation.
+
+// We use Promises to handle asynchronous operations in a cleaner way. They help avoid callback hell and make code easier to read and maintain. A Promise has three states: Pending, Fulfilled, and Rejected. We use .then() to handle successful results and .catch() to handle errors.
+
+
+// A Promise is a JavaScript object that represents the eventual completion or failure of an asynchronous operation. A Promise has three states: Pending, Fulfilled, and Rejected. We use .then() to handle successful results and .catch() to handle errors.
+
+// A Promise is an object used to handle asynchronous operations in JavaScript. It represents a future value that may be available later. A Promise can be in one of three states: Pending, Fulfilled, or Rejected.
+
+// We use Promises to handle asynchronous operations in a cleaner way. They help avoid callback hell and make code easier to read and maintain. Functions like fetch() already return Promises, which is why we can use .then() or async/await with them.
+
+
+
+// WHAT IS .then()?
+// .then() is a Promise method used to handle the successful result of a Promise. It runs when the Promise is fulfilled.
+
+
+// WHAT IS .catch()?
+// .catch() is a Promise method used to handle errors or failed Promises. It runs when the Promise is rejected.
+
+
+// What is async?
+// async is a keyword used before a function. async makes a function return a Promise.
+
+// What is await?
+// await is used inside an async function. await pauses the execution of the async function until the Promise is resolved.
+
+
+// async/await is a cleaner and more readable way to work with Promises in JavaScript. It helps write asynchronous code that looks like synchronous code.
+
+
+// A Promise is an object that represents the result of an asynchronous operation. .then() and .catch() are methods used to handle Promise results and errors. async/await is a modern syntax built on top of Promises that makes asynchronous code easier to read and write.
