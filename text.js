@@ -478,6 +478,13 @@ const firstNonRepeatingCharTwo = "aabb"
 
 //////////// JAVASCRIPT IMPORTANT SECTIONS //////////
 
+
+
+// WHAT IS JAVASCRIPT?
+// JavaScript is a high-level, single-threaded programming language mainly used for web development. We use it for create interactive effect within web browser. It makes websites interactive and allows developers to create dynamic user experiences.
+
+
+
 // CLOSURE
 //A closure is when a function remembers variables from its outer scope, even after the outer function has finished executing.
 
