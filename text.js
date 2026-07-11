@@ -336,6 +336,18 @@ const firstNonRepeatingCharTwo = "aabb"
 
 
 
+// LeetCode 58 - Length of Last Word
+// Find the length of the last word in a string.
+// Ignore any trailing spaces at the end of the string.
+// Start from the last character and move backwards.
+// Count the characters of the last word.
+// Stop counting when the first space is found after the last word.
+// console.log(lengthOfLastWord("Hello World")); // 5
+// console.log(lengthOfLastWord("   fly me   to   the moon  ")); // 4
+// console.log(lengthOfLastWord("luffy is still joyboy")); // 6
+
+
+
 
 
 // NUMBER TESTING

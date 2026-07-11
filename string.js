@@ -373,3 +373,35 @@ console.log(oneEditAway("pale", "bake"));
 // true
 // true
 // false
+
+
+
+/////////////////////////////////////////////////////////////////////////////
+
+
+// LeetCode 58 - Length of Last Word
+// Find the length of the last word in a string.
+// Ignore any trailing spaces at the end of the string.
+// Start from the last character and move backwards.
+// Count the characters of the last word.
+// Stop counting when the first space is found after the last word.
+var lengthOfLastWord = function(s) {
+
+  let lastWordLength = 0;
+
+  for (let i = s.length - 1; i >= 0 ; i--) {
+    if(s[i] !== ' ') {
+      lastWordLength++;
+    }else{
+      if(lastWordLength >= 1){
+        return lastWordLength;
+      }
+    }
+  };
+
+  return lastWordLength;
+};
+
+console.log(lengthOfLastWord("Hello World")); // 5
+console.log(lengthOfLastWord("   fly me   to   the moon  ")); // 4
+console.log(lengthOfLastWord("luffy is still joyboy")); // 6
