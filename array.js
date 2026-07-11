@@ -567,3 +567,32 @@ var searchInsert = function(nums, target) {
 console.log(searchInsert([1,3,5,6], 5)); // 2
 console.log(searchInsert([1,3,5,6], 2)); // 1
 console.log(searchInsert([1,3,5,6], 7)); // 4
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////
+
+
+// LeetCode 66 - Plus One
+// Given an array of digits representing a non-negative integer,
+// add one to the integer and return the result as an array of digits.
+// Use BigInt to handle very large numbers.
+var plusOne = function(digits) {
+
+  let numberStr = '';
+
+  for (let i = 0; i < digits.length; i++) {
+    
+    numberStr += digits[i];
+
+    if(i + 1 === digits.length){
+      return Array.from(String(BigInt(numberStr) + 1n) , Number)
+    }
+    
+  }
+
+  return "array is empty"
+};
+console.log(plusOne([4,3,2,1])) // [4,3,2,2]
+console.log(plusOne([1,2,3])) // [1,2,4]
+console.log(plusOne([9])) // [1,0]

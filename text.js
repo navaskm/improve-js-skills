@@ -193,6 +193,16 @@ const groupAnagrams = ["eat", "tea", "tan", "ate", "nat", "bat"];
 
 
 
+// LeetCode 66 - Plus One
+// Given an array of digits representing a non-negative integer,
+// add one to the integer and return the result as an array of digits.
+// Use BigInt to handle very large numbers.
+// console.log(plusOne([4,3,2,1])) // [4,3,2,2]
+// console.log(plusOne([1,2,3])) // [1,2,4]
+// console.log(plusOne([9])) // [1,0]
+
+
+
 
 
 // STRING TESTING
