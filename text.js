@@ -408,6 +408,17 @@ const firstNonRepeatingCharTwo = "aabb"
 
 
 
+// LeetCode 119 - Pascal's Triangle II
+// Return the row at the given rowIndex from Pascal's Triangle.
+// The first and last number of every row is always 1.
+// Every middle number is the sum of the two numbers
+// directly above it from the previous row.
+// console.log(getRow(5)); // [1,5,10,10,5,1]
+// console.log(getRow(3)); // [1,3,3,1]
+// console.log(getRow(1)); // [1,1]
+
+
+
 
 
 // OBJECT TESTING

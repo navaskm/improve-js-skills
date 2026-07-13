@@ -151,3 +151,52 @@ var generate = function(numRows) {
 
 console.log(generate(5)); // [[1],[1,1],[1,2,1],[1,3,3,1],[1,4,6,4,1]]
 console.log(generate(3)); // [[1],[1,1],[1,2,1]]
+
+
+
+///////////////////////////////////////////////////////////////////////////////////
+
+// LeetCode 119 - Pascal's Triangle II
+// Return the row at the given rowIndex from Pascal's Triangle.
+// The first and last number of every row is always 1.
+// Every middle number is the sum of the two numbers
+// directly above it from the previous row.
+var getRow = function(rowIndex) {
+
+  if(rowIndex === 0){
+    return [1]
+  }else if(rowIndex === 1){
+    return [1, 1]
+  }
+
+  const result = [];
+  let current = [];
+  let prev = []
+
+  for (let i = 1; i <= rowIndex + 1; i++) {
+    if(i === 1){
+      continue
+    }else if(i === 2){
+      prev = [1, 1]
+    }else{
+      current.push(1);
+      for (let k = 0; k < prev.length - 1; k++) {
+        current.push(prev[k] + prev[k + 1])
+      }
+      current.push(1)
+
+      if(rowIndex + 1 === i){
+        return current
+      };
+
+      result.push(current);
+      prev = current;
+      current = []
+    }
+  }
+
+  return null;
+};
+console.log(getRow(5)); // [1,5,10,10,5,1]
+console.log(getRow(3)); // [1,3,3,1]
+console.log(getRow(1)); // [1,1]
