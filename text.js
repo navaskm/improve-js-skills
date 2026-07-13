@@ -398,6 +398,16 @@ const firstNonRepeatingCharTwo = "aabb"
 
 
 
+// LeetCode 118 - Pascal's Triangle
+// Generate the first numRows of Pascal's Triangle.
+// The first and last number of every row is always 1.
+// Every middle number is the sum of the two numbers
+// directly above it from the previous row.
+// console.log(generate(5)); // [[1],[1,1],[1,2,1],[1,3,3,1],[1,4,6,4,1]]
+// console.log(generate(3)); // [[1],[1,1],[1,2,1]]
+
+
+
 
 
 // OBJECT TESTING

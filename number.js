@@ -110,3 +110,44 @@ const average = arr => {
 console.log(average([1, 2, 3, 4, 5]));
 console.log(average([10, 20]));
 console.log(average([]));
+
+
+
+///////////////////////////////////////////////////////////////////////////////
+
+
+// LeetCode 118 - Pascal's Triangle
+// Generate the first numRows of Pascal's Triangle.
+// The first and last number of every row is always 1.
+// Every middle number is the sum of the two numbers
+// directly above it from the previous row.
+var generate = function(numRows) {
+
+  const result = [];
+  let current = [];
+  let prev = []
+
+  for (let i = 1; i <= numRows; i++) {
+    if(i === 1){
+      result.push([1])
+    }else if(i === 2){
+      result.push([1, 1])
+      prev = [1, 1]
+    }else{
+      current.push(1);
+      for (let k = 0; k < prev.length - 1; k++) {
+        current.push(prev[k] + prev[k + 1])
+      }
+      current.push(1)
+
+      result.push(current);
+      prev = current;
+      current = []
+    }
+  }
+
+  return result;
+};
+
+console.log(generate(5)); // [[1],[1,1],[1,2,1],[1,3,3,1],[1,4,6,4,1]]
+console.log(generate(3)); // [[1],[1,1],[1,2,1]]
