@@ -419,6 +419,15 @@ const firstNonRepeatingCharTwo = "aabb"
 
 
 
+// LeetCode 190 - Reverse Bits
+// Reverse the bits of a 32-bit unsigned integer.
+// Convert the number to a 32-bit binary string,
+// reverse the bits, and convert it back to a decimal number.
+// console.log(reverseBits(43261596)); // 964176192
+// console.log(reverseBits(2147483644)); // 1073741822
+
+
+
 
 
 // OBJECT TESTING

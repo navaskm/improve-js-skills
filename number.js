@@ -200,3 +200,23 @@ var getRow = function(rowIndex) {
 console.log(getRow(5)); // [1,5,10,10,5,1]
 console.log(getRow(3)); // [1,3,3,1]
 console.log(getRow(1)); // [1,1]
+
+
+
+/////////////////////////////////////////////////////////////////////////////
+
+
+// LeetCode 190 - Reverse Bits
+// Reverse the bits of a 32-bit unsigned integer.
+// Convert the number to a 32-bit binary string,
+// reverse the bits, and convert it back to a decimal number.
+var reverseBits = function(n) {
+
+  const binary = (n >>> 0).toString(2).padStart(32, "0")
+  const reverseBinary = binary.split('').reverse().join('')
+
+  return parseInt(reverseBinary, 2);
+};
+
+console.log(reverseBits(43261596)); // 964176192
+console.log(reverseBits(2147483644)); // 1073741822
