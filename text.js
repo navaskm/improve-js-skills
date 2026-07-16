@@ -428,6 +428,15 @@ const firstNonRepeatingCharTwo = "aabb"
 
 
 
+// LeetCode 191 - Number of 1 Bits
+// Count the number of 1s in the binary representation of a number.
+// This is also called the Hamming Weight.
+// console.log(hammingWeight(11)); // 3
+// console.log(hammingWeight(128)); // 1
+// console.log(hammingWeight(2147483645)); // 30
+
+
+
 
 
 // OBJECT TESTING

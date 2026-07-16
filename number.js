@@ -220,3 +220,26 @@ var reverseBits = function(n) {
 
 console.log(reverseBits(43261596)); // 964176192
 console.log(reverseBits(2147483644)); // 1073741822
+
+
+
+///////////////////////////////////////////////////////////////////////////////////
+
+
+// LeetCode 191 - Number of 1 Bits
+// Count the number of 1s in the binary representation of a number.
+// This is also called the Hamming Weight.
+var hammingWeight = function(n) {
+
+  const binary = n.toString(2);
+  let result = 0;
+
+  for(const num of binary){
+    result += Number(num);
+  }
+
+  return result;
+};
+console.log(hammingWeight(11)); // 3
+console.log(hammingWeight(128)); // 1
+console.log(hammingWeight(2147483645)); // 30
