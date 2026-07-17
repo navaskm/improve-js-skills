@@ -276,3 +276,32 @@ var isPowerOfTwo = function(n) {
 console.log(isPowerOfTwo(1)); // true
 console.log(isPowerOfTwo(16)); // true
 console.log(isPowerOfTwo(3)); // false
+
+
+
+////////////////////////////////////////////////////////////////////////
+
+
+// LeetCode 258 - Add Digits
+// Repeatedly add all the digits of a number
+// until only one digit remains.
+var addDigits = function(num) {
+
+  let numStr = String(num);
+
+  while(numStr.length > 1){
+
+    let current = 0;
+
+    for(const num of numStr){
+      current += Number(num);
+    }
+
+    numStr = String(current)
+  }
+
+  return Number(numStr);
+};
+
+console.log(addDigits(38)); // 2
+console.log(addDigits(0)); // 0

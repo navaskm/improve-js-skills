@@ -452,6 +452,14 @@ const firstNonRepeatingCharTwo = "aabb"
 
 
 
+// LeetCode 258 - Add Digits
+// Repeatedly add all the digits of a number
+// until only one digit remains.
+// console.log(addDigits(38)); // 2
+// console.log(addDigits(0)); // 0
+
+
+
 
 
 // OBJECT TESTING
@@ -699,3 +707,28 @@ const firstNonRepeatingCharTwo = "aabb"
 
 
 // A Promise is an object that represents the result of an asynchronous operation. .then() and .catch() are methods used to handle Promise results and errors. async/await is a modern syntax built on top of Promises that makes asynchronous code easier to read and write.
+
+
+// LeetCode 258 - Add Digits
+// Repeatedly add all the digits of a number
+// until only one digit remains.
+var addDigits = function(num) {
+
+  let numStr = String(num);
+
+  while(numStr.length > 1){
+
+    let current = 0;
+
+    for(const num of numStr){
+      current += Number(num);
+    }
+
+    numStr = String(current)
+  }
+
+  return Number(numStr);
+};
+
+console.log(addDigits(38)); // 2
+console.log(addDigits(0)); // 0
