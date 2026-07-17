@@ -437,6 +437,21 @@ const firstNonRepeatingCharTwo = "aabb"
 
 
 
+// LeetCode 231 - Power of Two
+// Check whether a number is a power of two.
+// A power of two can be created by multiplying 2 by itself.
+// Examples:
+// 1 = 2^0
+// 2 = 2^1
+// 4 = 2^2
+// 8 = 2^3
+// 16 = 2^4
+// console.log(isPowerOfTwo(1)); // true
+// console.log(isPowerOfTwo(16)); // true
+// console.log(isPowerOfTwo(3)); // false
+
+
+
 
 
 // OBJECT TESTING
