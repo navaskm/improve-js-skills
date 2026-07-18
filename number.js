@@ -305,3 +305,30 @@ var addDigits = function(num) {
 
 console.log(addDigits(38)); // 2
 console.log(addDigits(0)); // 0
+
+
+
+////////////////////////////////////////////////////////////////////////////////////
+
+
+// LeetCode 367 - Valid Perfect Square
+// Check whether a positive number is a perfect square.
+// A perfect square is a number that can be created
+// by multiplying an integer by itself.
+// Examples:
+// 1 = 1 * 1
+// 4 = 2 * 2
+// 9 = 3 * 3
+// 16 = 4 * 4
+var isPerfectSquare = function(num) {
+  for (let i = 1; i <= num; i++) {
+    if(i * i === num){
+      return true
+    }else if(i * i > num){
+      return false
+    }
+  }
+};
+
+console.log(isPerfectSquare(16)); // true
+console.log(isPerfectSquare(14)); // false
