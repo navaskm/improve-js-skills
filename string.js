@@ -405,3 +405,40 @@ var lengthOfLastWord = function(s) {
 console.log(lengthOfLastWord("Hello World")); // 5
 console.log(lengthOfLastWord("   fly me   to   the moon  ")); // 4
 console.log(lengthOfLastWord("luffy is still joyboy")); // 6
+
+
+
+///////////////////////////////////////////////////////////////////////////////
+
+
+// LeetCode 345 - Reverse Vowels of a String
+// Reverse only the vowels in a string.
+// Keep all non-vowel characters in their original positions.
+// Both uppercase and lowercase vowels should be handled.
+var reverseVowels = function(s) {
+
+  const vowels = new Set(['a','e','i','o','u']);
+  const includesVowels = []
+
+  for(const letter of s){
+    if(vowels.has(letter.toLocaleLowerCase())){
+      includesVowels.push(letter)
+    }
+  };
+
+  let count = includesVowels.length - 1;
+  let result = ''
+
+  for (let i = 0; i < s.length; i++) {
+    if(vowels.has(s[i].toLocaleLowerCase())){
+      result += includesVowels[count]
+      count--
+    }else{
+      result += s[i]
+    }
+  };
+
+  return result;
+};
+console.log(reverseVowels("IceCreAm")); // "AceCreIm"
+console.log(reverseVowels("leetcode")); // "leotcede"
