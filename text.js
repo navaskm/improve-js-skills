@@ -506,6 +506,17 @@ const firstNonRepeatingCharTwo = "aabb"
 
 
 
+// LeetCode 441 - Arranging Coins
+// Arrange n coins into complete rows.
+// The first row needs 1 coin,
+// the second row needs 2 coins,
+// the third row needs 3 coins, and so on.
+// Return the number of completely filled rows.
+// console.log(arrangeCoins(5)); // 2
+// console.log(arrangeCoins(8)); // 3
+
+
+
 
 
 // OBJECT TESTING

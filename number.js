@@ -365,3 +365,27 @@ var fizzBuzz = function(n) {
 console.log(fizzBuzz(3)); // ["1","2","Fizz"]
 console.log(fizzBuzz(5)); // ["1","2","Fizz","4","Buzz"]
 console.log(fizzBuzz(15)); // ["1","2","Fizz","4","Buzz","Fizz","7","8","Fizz","Buzz","11","Fizz","13","14","FizzBuzz"]
+
+
+
+//////////////////////////////////////////////////////////////////////////////
+
+
+// LeetCode 441 - Arranging Coins
+// Arrange n coins into complete rows.
+// The first row needs 1 coin,
+// the second row needs 2 coins,
+// the third row needs 3 coins, and so on.
+// Return the number of completely filled rows.
+var arrangeCoins = function(n) {
+  let result = 0;
+
+  while (n > result) {
+    n -= ++result;
+  }
+
+  return result;
+};
+
+console.log(arrangeCoins(5)); // 2
+console.log(arrangeCoins(8)); // 3
