@@ -596,3 +596,24 @@ var plusOne = function(digits) {
 console.log(plusOne([4,3,2,1])) // [4,3,2,2]
 console.log(plusOne([1,2,3])) // [1,2,4]
 console.log(plusOne([9])) // [1,0]
+
+
+
+////////////////////////////////////////////////////////////////////////////
+
+
+// LeetCode 414 - Third Maximum Number
+// Find the third distinct maximum number in the array.
+// If the third maximum does not exist,
+// return the largest number instead.
+// Duplicate numbers should only be counted once.
+var thirdMax = function(nums) {
+  const sortRemoveDuplicate = [...new Set(nums)].sort((a,b) => b-a);
+  if(sortRemoveDuplicate[2] !== undefined) return sortRemoveDuplicate[2];
+
+  return sortRemoveDuplicate[0] || null;
+};
+console.log(thirdMax([3,2,1])); // 1
+console.log(thirdMax([0,2])); // 2
+console.log(thirdMax([2,2,3,1])); // 1
+console.log(thirdMax([3,3,4,3,4,3,0,3,3])); // 0

@@ -202,6 +202,17 @@ const groupAnagrams = ["eat", "tea", "tan", "ate", "nat", "bat"];
 // console.log(plusOne([9])) // [1,0]
 
 
+// LeetCode 414 - Third Maximum Number
+// Find the third distinct maximum number in the array.
+// If the third maximum does not exist,
+// return the largest number instead.
+// Duplicate numbers should only be counted once.
+// console.log(thirdMax([3,2,1])); // 1
+// console.log(thirdMax([0,2])); // 2
+// console.log(thirdMax([2,2,3,1])); // 1
+// console.log(thirdMax([3,3,4,3,4,3,0,3,3])); // 0
+
+
 
 
 
